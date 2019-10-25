@@ -17,5 +17,5 @@ db.execute("SELECT member_name
             WHERE lab_name = ?",[lab_name]) do |row|
             puts row.join(",")
 end
-
+#git
 db.close
