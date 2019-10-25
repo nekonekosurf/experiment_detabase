@@ -11,17 +11,11 @@ db.execute("CREATE TABLE new_tables
             INNER JOIN labs
             ON labs.id = lab_members.lab_id")
 
-name = gets.chomp
-lab_num =db.execute("SELECT lab_id
-            FROM new_tables
-            WHERE member_name =?",[name])
-
+lab_name = gets.chomp
 db.execute("SELECT member_name
-          FROM new_tables
-          WHERE lab_id = ?
-          AND  member_name!= ?",[lab_num],[name]) do |row|
-          puts row.join(",")
+            FROM new_tables
+            WHERE lab_name = ?",[lab_name]) do |row|
+            puts row.join(",")
 end
-
 
 db.close
