@@ -1,0 +1,63 @@
+[02170037@PC139 3-3]$ sqlite3 sandbox.db
+SQLite version 3.7.17 2013-05-20 00:56:22
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> CREATE TABLE labs(id integer PRIMARY KEY,lab_name text);
+sqlite> CREATE TABLE lab_members(id integer PRIMARY KEY,lab_id integer,member_name text,position text);
+sqlite> SELECT * FROM labs 
+   ...> SELECT * FROM labs ;
+Error: near "SELECT": syntax error
+sqlite> SELECT * FROM lab_members  ;
+sqlite> SELECT * FROM lab_members;
+sqlite> SELECT * FROM labs;
+sqlite> .mode line
+sqlite> PRAGMA TABLE_INFO(labs);
+       cid = 0
+      name = id
+      type = integer
+   notnull = 0
+dflt_value = 
+        pk = 1
+
+       cid = 1
+      name = lab_name
+      type = text
+   notnull = 0
+dflt_value = 
+        pk = 0
+sqlite> PRAGMA TABLE_INFO(lab_members);
+       cid = 0
+      name = id
+      type = integer
+   notnull = 0
+dflt_value = 
+        pk = 1
+
+       cid = 1
+      name = lab_id
+      type = integer
+   notnull = 0
+dflt_value = 
+        pk = 0
+
+       cid = 2
+      name = member_name
+      type = text
+   notnull = 0
+dflt_value = 
+        pk = 0
+
+       cid = 3
+      name = position
+      type = text
+   notnull = 0
+dflt_value = 
+        pk = 0
+sqlite> 
+sqlite> .separator
+Error: unknown command or invalid arguments:  "separator". Enter ".help" for help
+sqlite> .separator ,
+sqlite> .import labs.csv labs
+sqlite> .import lab_members.csv lab_members
+
+
