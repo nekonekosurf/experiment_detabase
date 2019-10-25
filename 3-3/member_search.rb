@@ -21,10 +21,6 @@ db.execute("SELECT member_name
           WHERE lab_id = ?
           AND  member_name!= ?",[lab_num],[name]) do |row|
           puts row.join(",")
-<<<<<<< HEAD
-
-=======
->>>>>>> 2c43d5ae2834973e1842a683f804c2096b6d099c
 end
 
 
