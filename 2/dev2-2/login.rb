@@ -7,7 +7,7 @@ cgi.out("type" => "text/html",
 	file = File.open("List.txt","r")
 	arr=[]
 	file.each_line do |line|
-		arr.push(line.chomp)		
+		arr.push(line.chomp)
 	end
 
 	if arr.include?(password)
