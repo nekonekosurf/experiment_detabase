@@ -1,0 +1,19 @@
+<html lang="ja" >
+  <head>
+    <meta charaset="utf-8">
+    <title> <%= @title%> </title>
+  </head>
+  <body>
+    <h1> login.erb    </h1>
+    <table border>
+    <tr>
+        <th>member_name</th>
+      </tr>
+      <%   @member.each do |mmbr| %>
+      <tr>
+        <td><%= mmbr.member_name %></td>
+      </tr>
+      <% end %>
+    </table>
+  </body>
+</html>

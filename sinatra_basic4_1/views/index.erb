@@ -1,0 +1,33 @@
+<html lang="ja" >
+  <head>
+    <meta charaset="utf-8">
+    <title> <%= @title%> </title>
+  </head>
+  <body>
+    <h1> Hello, <%=@world%>  </h1>
+      <table>
+        <tr>
+          <th>lab_name</th>
+        </tr>
+        <form  action="from_labName" method="post">
+          <tr>
+            <td>  <input type="text" name="lab_name" > </td>
+            <td>  <input type="submit" value="ログイン" > </td>
+          </tr>
+        </form>
+      </table>
+
+
+      <table>
+        <tr>
+          <th>member_name</th>
+        </tr>
+        <form  action="from_memberName" method="post">
+          <tr>
+            <td>  <input type="text" name="member_name" > </td>
+            <td>  <input type="submit" value="ログイン" > </td>
+          </tr>
+        </form>
+      </table>
+    </body>
+</html>
