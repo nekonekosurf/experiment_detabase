@@ -26,6 +26,7 @@ end
 post '/from_memberName' do
   @title = 'View member'
   lab_num =NewTable.find_by(:member_name=>params[:member_name])
-  @member= NewTable.where(:lab_id => lab_num.lab_id).where.not(:member_name =>params[:member_name] )
+  @member= NewTable.where(:lab_id => lab_num.lab_id)
+  .where.not(:member_name =>params[:member_name] )
   erb :member_search
 end

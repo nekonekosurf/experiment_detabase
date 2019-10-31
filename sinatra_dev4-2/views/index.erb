@@ -1,0 +1,23 @@
+<html lang="ja" >
+  <head>
+    <meta charaset="utf-8">
+    <title> <%= @title%> </title>
+  </head>
+  <body>
+    <h1> login  </h1>
+      <table>
+        <tr>
+          <th>user_id</th>
+          <th>password</th>
+        </tr>
+        <form  action="board" method="post">
+          <tr>
+            <td>  <input type="text" name="user_id" > </td>
+            <td>  <input type="text" name="password" > </td>
+            <td>  <input type="submit" value="ログイン" > </td>
+          </tr>
+
+        </form>
+      </table>
+    </body>
+</html>
