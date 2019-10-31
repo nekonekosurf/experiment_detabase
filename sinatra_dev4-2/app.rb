@@ -43,8 +43,8 @@ end
 nowTime = DateTime.now
 post '/update' do
   BulletinBoard.create(:user_id=>params[:user_id],:message=>params[:message],:taimu=>nowTime)#.order("id DESC").first
-  @board=BulletinBoard.all.order("id DESC").first
+  @board=BulletinBoard.all.order("id DESC")
 
-  erb :login
+  erb :logins
 
 end

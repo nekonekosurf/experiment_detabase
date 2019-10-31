@@ -11,7 +11,17 @@
           <td>  <input type="submit" value="POST" > </td>
         </tr>
       </form>
-    <table>
+
+
+
+
+      <table border>
+        <tr>
+          <th>投稿番号</th>
+          <th>ユーザーID</th>
+          <th>コメント</th>
+          <th>投稿時間</th>
+        </tr>
       <%   @board.each do |brd| %>
         <tr>
           <td><%= brd.id %></td>
