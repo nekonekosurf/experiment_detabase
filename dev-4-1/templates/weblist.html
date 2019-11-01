@@ -1,0 +1,43 @@
+<html lang="ja" >
+  <head>
+    <meta charaset="utf-8">
+    <title> ようこそ</title>
+  </head>
+  <body>
+    <h1> User:  {{user_id}}    </h1>
+
+    <table>
+      <tr>
+        <td>ページ名</td>
+        <td>URL</td>
+      </tr>
+      <form  action="update" method="post">
+        <tr>
+          <td>  <input type="text" name="page_name" > </td>
+          <td>  <input type="text" name="url" > </td>
+          <td>  <input type="submit" value="POST" > </td>
+        </tr>
+      </form>
+
+
+    </table>
+      <table border>
+        <tr>
+          <th>投稿番号</th>
+          <th>投稿者</th>
+          <th>ページ名</th>
+          <th>URL</th>
+        </tr>
+      {%   for row in board %}
+        <tr>
+          <td>{{row[0]}}</td>
+          <td>{{row[1]}}</td>
+          <td>{{row[2]}}</td>
+          <td></td>
+          <td> <a href=  " {{row[3]}}">{{row[3]}} </a></td>
+        </tr>
+      {%  endfor %}
+    </table>
+
+  </body>
+</html>
