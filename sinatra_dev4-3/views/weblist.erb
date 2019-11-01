@@ -1,0 +1,50 @@
+<html lang="ja" >
+  <head>
+    <meta charaset="utf-8">
+    <title> <%= @title%> </title>
+  </head>
+  <body>
+    <h1> User:  <%=@user_id%>    </h1>
+
+    <table>
+      <tr>
+        <td>ページ名</td>
+        <td>URL</td>
+      </tr>
+      <form  action="update" method="post">
+        <tr>
+          <td>  <input type="text" name="page_name" > </td>
+          <td>  <input type="text" name="url" > </td>
+          <td>  <input type="submit" value="POST" > </td>
+        </tr>
+      </form>
+
+
+    </table>
+
+
+
+
+
+
+
+      <table border>
+        <tr>
+          <th>投稿番号</th>
+          <th>投稿者</th>
+          <th>ページ名</th>
+          <th>URL</th>
+        </tr>
+      <%   @board.each do |brd| %>
+        <tr>
+          <td><%= brd.id %></td>
+          <td><%= brd.user_id %></td>
+          <td><%= brd.page_name %></td>
+
+          <td> <a href=  " <%= brd.url %>"><%= brd.url %> </a></td>
+        </tr>
+      <% end %>
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,13 @@
+current directory: /home/prml/workspace/development/atom_create/imformation_experience/sinatra_app/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+/home/prml/.rbenv/versions/2.6.0/bin/ruby -I /home/prml/.rbenv/versions/2.6.0/lib/ruby/2.6.0 -r ./siteconf20191027-11297-pc3vzh.rb extconf.rb
+creating Makefile
+
+current directory: /home/prml/workspace/development/atom_create/imformation_experience/sinatra_app/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/prml/workspace/development/atom_create/imformation_experience/sinatra_app/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/prml/workspace/development/atom_create/imformation_experience/sinatra_app/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
