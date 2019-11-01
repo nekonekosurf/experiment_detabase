@@ -19,7 +19,7 @@ cgi.out("type" => "text/html",
 
 												db_password = db.execute("SELECT COUNT(*)
 																									FROM accounts
-																									WHERE password =?",[password])
+																									WHERE password =? AND user =?",[password],[user])
 												if db_password == [[0]]
 													html = html+"<p>login denied </p>\n
 																			 <p>password is not correct </p>"
